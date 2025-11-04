@@ -5,7 +5,7 @@
   "version": "1.0",
   "author": "lepayy",
   "icons": {"48": "icon/icon48.png", "128": "icon/icon128.png"},
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["scripting"],
   
   "content_scripts": [{
     "matches": ["*://*.live.vkvideo.ru/*"],
@@ -19,4 +19,5 @@
     
   }
   ]
+
 }
