@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Images In Chat (Safety)",
+  "description": "Показываю картинки, видео, гиф в чатах твича, вк плей, и кика.",
+  "version": "1.0",
+  "author": "lepayy",
+  "icons": {"48": "icon/icon48.png", "128": "icon/icon128.png"},
+  "permissions": ["activeTab", "scripting"],
+  
+  "content_scripts": [{
+    "matches": ["*://*.live.vkvideo.ru/*"],
+    "js": ["vk.js"]}, {
+    
+    "matches": ["*://*.twitch.tv/*"],
+    "js": ["twitch.js"] }, {
+    
+    "matches": ["*://*.kick.com/*"],
+    "js": ["kick.js"] 
+    
+  }
+  ]
+}
