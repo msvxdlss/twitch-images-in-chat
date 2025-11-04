@@ -13,4 +13,4 @@
 скачайте zip архив, распакуйте в удобное место на диске, в хроме включите Режим разработчика в расширениях, и укажите папку с этими файлами, всё.
 
 
-![Alt text]([URL_to_image "Optional title"](https://s.iimg.su/s/04/gdMtlaOxHqcWLhseVWJQHSJOifu96w1WMzeaJe7l.png))
+![снимок](https://s.iimg.su/s/04/gdMtlaOxHqcWLhseVWJQHSJOifu96w1WMzeaJe7l.png)
