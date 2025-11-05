@@ -1,7 +1,40 @@
 const SECURE_HOSTS = [
-    'imgur.com', 'giphy.com', 'i.pinimg.com', 'postimg.cc', 'iimg.su',
-    'i.redd.it', 'tenor.com', 'gfycat.com', 'ibb.co', 'prnt.sc',
-    'paste.pics', 'discordapp.com', 'pic.re', 'vk.com', '2ch.org', '2ch.su'
+    'imgur.com',               // Крупный и один из самых популярных хостингов изображений
+    'i.imgur.com',             // CDN для прямых ссылок Imgur (часто используется вместо imgur.com)
+    'giphy.com',               // Основной домен для GIF-анимаций (может перенаправлять)
+    'media.giphy.com',         // CDN для прямых ссылок Giphy
+    'tenor.com',               // Популярный сервис для GIF-анимаций
+    'media.tenor.com',         // CDN для прямых ссылок Tenor
+    'gfycat.com',              // Сервис для высококачественных GIF/видео
+    'ibb.co',                  // Сокращенный домен для ImgBB
+    'i.ibb.co',                // Прямой CDN для ImgBB
+    'imgbb.com',               // Основной домен ImgBB
+    'postimg.cc',              // Популярный хостинг изображений
+    'iimg.su',                 // Хостинг изображений (часто используется в Рунете)
+    'imgbox.com',              // Хостинг изображений
+    'catbox.moe',              // Хостинг файлов, часто используется для гифок и картинок
+    'flickr.com',              // Крупный фотохостинг
+    'prnt.sc',                 // Lightshot (сервис для скриншотов)
+    'paste.pics',              // Сервис для размещения картинок/скриншотов
+    'i.pinimg.com',            // CDN Pinterest (для изображений)
+    'i.redd.it',               // CDN Reddit (для изображений)
+    'discordapp.com',          // Основной домен Discord
+    'cdn.discordapp.com',      // CDN Discord (для вложений, аватаров и медиа)
+    'userapi.com',             // CDN ВКонтакте (для медиа и аватаров)
+    'vk.com',               // Основной домен VK.com (уже покрыт userapi.com для медиа, но может быть добавлен для ссылок)
+    'clips.twitchcdn.net',     // CDN для клипов Twitch
+    'cdn.betterttv.net',       // CDN для эмоций BetterTTV (расширение Twitch)
+    'cdn.frankerfacez.com',    // CDN для эмоций FrankerFaceZ (расширение Twitch)
+    'cdn.7tv.app',             // CDN для эмоций 7TV (расширение Twitch)
+    'i.ytimg.com',             // CDN YouTube (для превью и изображений)
+    'yt3.ggph.com',            // CDN Google/YouTube (для аватаров пользователей)
+    'scontent.cdninstagram.com', // CDN Instagram (для контента)
+    'photos.google.com',       // Google Photos/пользовательский контент
+    'drive.google.com',        // Google Drive (для расшаренных файлов)
+    'i.stack.imgur.com',       // CDN Imgur, используемый Stack Exchange/Stack Overflow
+    'pic.re',                  // Хостинг изображений
+    '2ch.org',                 // Имиджборд (традиционно используется как источник контента)
+    '2ch.su',                  // Имиджборд (традиционно используется как источник контента)
 ];
 
 const SECURE_HOSTS_SET = new Set(SECURE_HOSTS);
@@ -96,4 +129,5 @@ if (chatContainer) {
         document.querySelectorAll(CHAT_LINK_SELECTORS + `:not([${PROCESSED_ATTR}])`).forEach(processLink);
         setTimeout(fallbackLoop, 1000);
     })();
+
 }
