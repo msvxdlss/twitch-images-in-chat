@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Images In Chat (Safety)",
+  "description": "Показываю картинки, видео, гиф в чатах твича, вк плей, и кика.",
+  "version": "6.4",
+  "author": "lepayy",
+  "icons": {"48": "icon/icon48.png", "128": "icon/icon128.png"},
+  
+  "permissions": [
+    "storage", 
+    "alarms" 
+  ],
+  "host_permissions": [
+    "*://*.kick.com/*", 
+    "*://*.twitch.tv/*",
+    "*://*.live.vkvideo.ru/*",
+    "https://raw.githubusercontent.com/*" 
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [{
+    "matches": ["*://*.live.vkvideo.ru/*"],
+    "js": ["vk.js"]}, {
+    
+    "matches": ["*://*.twitch.tv/*"],
+    "js": ["twitch.js"] }, {
+    
+    "matches": ["*://*.kick.com/*"],
+    "js": ["kick.js"] 
+  }],
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["images/eror.jpg"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
